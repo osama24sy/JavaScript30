@@ -80,6 +80,15 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const dataObj = new Object();
+    for (let i = 0; i < data.length; i++) {
+      if (data[i] in dataObj) {
+        dataObj[data[i]]++;
+      } else {
+        dataObj[data[i]] = 0;
+      }
+    }
+    console.log(dataObj);
   </script>
 </body>
 </html>
